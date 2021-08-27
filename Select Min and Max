@@ -1,0 +1,14 @@
+https://www.hackerrank.com/challenges/weather-observation-station-5/problem
+
+SELECT City, LENGTH(City)
+FROM (SELECT City
+      FROM Station
+     ORDER BY LENGTH(City), City)
+WHERE ROWNUM = 1;
+SELECT City, LENGTH(City)
+FROM (SELECT City
+      FROM Station
+     ORDER BY LENGTH(City) DESC, City)
+WHERE ROWNUM = 1;
+
+https://www.oracletutorial.com/oracle-basics/oracle-fetch/
