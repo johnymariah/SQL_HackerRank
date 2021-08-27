@@ -1,0 +1,7 @@
+<https://www.hackerrank.com/challenges/weather-observation-station-3/problem>
+
+select distinct(city)
+from station
+where mod(id,2)=0;
+
+https://stackoverflow.com/questions/20014495/how-to-select-even-records-from-a-table-in-oracle/20019043
