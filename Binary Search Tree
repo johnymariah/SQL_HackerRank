@@ -1,0 +1,15 @@
+
+
+https://www.hackerrank.com/challenges/binary-search-tree-1/problem?isFullScreen=true
+
+SELECT 
+    b1.N,
+    CASE
+        WHEN b1.P IS NULL THEN 'Root'
+        WHEN b1.P IS NOT NULL AND b1.N NOT IN (SELECT DISTINCT b2.P FROM BST b2 WHERE b2.P IS NOT NULL) THEN 'Leaf'
+        WHEN b1.P IS NOT NULL AND b1.N IN (SELECT DISTINCT b3.P FROM BST b3 WHERE b3.P IS NOT NULL ) THEN 'Inner'
+    END 
+FROM BST b1
+ORDER BY b1.N;
+                
+  #DISTINCT - also gives the NULL values hence make sure to filter it out
